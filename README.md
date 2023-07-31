@@ -1,0 +1,2 @@
+# Manga Magic
+ Manga Magic is an open-source Python-based manga, manhua, and manhwa recommender system designed to provide manga enthusiasts with personalized recommendations tailored to their individual preferences. This project leverages advanced collaborative filtering and content-based filtering techniques, along with machine learning algorithms, to deliver accurate and engaging manga suggestions.
