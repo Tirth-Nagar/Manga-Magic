@@ -10,7 +10,7 @@ def get_max_pages():
     r = requests.get(root_url)
     soup = BeautifulSoup(r.text, 'html.parser')
     max_pages = soup.find('div', class_='pagination').find_all('a')[-2].text # -2 because the last element is 'Next'
-    return int(max_pages)
+    return int(max_pages)   
 
 def check_text(value):
     if value:
@@ -53,10 +53,12 @@ def item_scraper(item):
     return [title, description, rating, year, tags, cover]
 
 max_pages = get_max_pages()
+print(f'Found {max_pages} pages')
 
 pages_data = {}
 
 for i in range(max_pages):
+    print(f'Page {i+1}')
     data = scraper(i+1)
     pages_data[i] = data
 
